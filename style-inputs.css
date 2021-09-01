@@ -1,0 +1,155 @@
+.contengral {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    border: 1px solid red;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: .9em;
+    background-color: #252935;
+    color: white;
+}
+
+
+.contengral h2{
+    text-align: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.conten{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.contengral label{
+    margin: 5px 0;
+}
+
+input[type=url],
+input[type=color], 
+input[type=number],
+select, 
+button,
+textarea{
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #393e49;
+    color: white;
+}
+
+input[type=number]::placeholder,
+textarea::placeholder{
+    color: white;
+}
+
+input[type=range]{
+    padding: 12px 0;
+    background-color:transparent;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {/*BOTON*/
+    background-color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+input[type=range]::-moz-range-thumb { 
+    border:none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input[type=range]::-ms-thumb {
+   
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track { /*BARRA*/
+    background-color: #5a5d68;
+    height: 7px;
+    border-radius: 3px;
+}
+
+
+input[type=range]::-moz-range-track {
+    background-color: #5a5d68;
+    height: 7px;
+    border-radius: 3px;
+    
+}
+
+input[type=range]::-ms-track {
+    background-color: #5a5d68;
+    height: 7px;
+    border-radius: 3px;
+}
+
+button{
+    width: 70%;
+    font-size: inherit;
+    color: inherit;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cincuenta {
+    width: 45%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.text-transform{
+    text-transform: none;
+  }
+
+  .contencuartos{
+      display: flex;
+      margin: 7px 0;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .contencuartos button{
+      width: 18%;
+  }
+
+  .contorno button{
+      width: 31%;
+  }
+
+  .anchomaximo {
+      width: 80%;
+  }

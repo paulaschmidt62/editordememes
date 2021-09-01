@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-inputs.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+   <div class="contengral">
+        <h2>IMAGEN</h2>
+
+        <!--URL-->
+        <div class="conten">
+            <label for="" class="bold">URL</label>
+            <input type="url" name="url">
+        </div>
+
+        <!--FONDO-->
+        <div class="conten">
+                <label for="" class="bold">FONDO</label>
+            <div class="row">
+                <input class="cincuenta" type="color" value="#FFFFFF">
+                <select class="cincuenta" name="select">
+                    <option value="Ninguno" selected>Ninguno</option>
+                    <option value="Aclarar">Aclarar</option>
+                    <option value="Oscurecer">Oscurecer</option>
+                    <option value="Diferencia">Diferencia</option>
+                    <option value="Luminosidad">Luminosidad</option>
+                    <option value="Multiplicar">Multiplicar</option>
+                </select>
+            </div>
+        </div>
+        
+        <!--FILTROS-->
+            <p class="bold">FILTROS</p>
+            <label for="">Brillo</label>
+            <input type="range" min="0" max="1">
+
+            <label for="">Opacidad</label>
+            <input type="range" min="0" max="1">
+
+            <label for="">Contraste</label>
+            <input type="range" min="100%" max="1000%">
+
+            <label for="">Desenfoque</label>
+            <input type="range" min="0" max="10">
+
+            <label for="">Escala de grises</label>
+            <input type="range" min="0%" max="100%">
+
+            <label for="">Sepia</label>
+            <input type="range" min="0%" max="100%">
+
+            <label for="">Hue</label>
+            <input type="range" min="0deg" max="359deg">
+
+            <label for="">Saturación</label>
+            <input type="range" min="100%" max="1000%">
+
+            <label for="">Negativo</label>
+            <input type="range" min="0" max="1">
+        
+        <!--RESTABLECER-->
+        <div class="conten">           
+            <button type="reset">Restablecer filtros</button>
+        </div>    
+    </div>
+
+<!--COLUMNA TEXTO-->    
+    <div class="contengral">
+        <h2>TEXTO</h2>
+
+        <!--SUPERIOR-->
+        <div class="conten">
+            <label for="" class="bold">superior</label>
+            <textarea name="" id="" cols="5" rows="1" minlength="03" maxlength="30" placeholder="TOP TEXT"></textarea>
+        </div>    
+        <div class="text-transform">
+            <input type="checkbox" name="" id=""><label for="">Sin texto superior</label> 
+        </div>
+
+        <!--INFERIOR-->
+        <div class="conten">
+            <label for="" class="bold">inferior</label>
+            <textarea name="" id="" cols="5" rows="1" minlength="03" maxlength="30" placeholder="BOTTOM TEXT"></textarea>
+        </div>    
+        <div class="text-transform">
+            <input type="checkbox" name="" id=""><label for="">Sin texto inferior</label> 
+        </div>
+        
+        <!--FUENTE-->
+        <div class="conten">
+            <label for="" class="bold">fuente</label>
+            <select name="select2">
+                <option value="Impact" selected>Impact</option>
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="">American TypeWriter</option>
+                <option value="">Andale Mono</option>
+                <option value="">Comics Sans MS</option>
+                <option value="">Helvetica</option>
+                <option value="">Verdana</option>
+                <option value="">Times New Roman</option>
+            </select>
+            <div class="contencuartos">
+                <input type="number" placeholder="40" min="12" max="118">
+                <button>I</button>
+                <button>M</button>
+                <button>D</button>
+            </div>
+        </div>
+    
+
+        <!--COLOR-->
+        <div class="row">
+            <div class="conten">
+                <label for="" class="bold">color</label>
+                <input class="anchomaximo" type="color" value="#000000">
+            </div>
+        <!--FONDO-->        
+            <div class="conten">
+                <label for="" class="bold">fondo</label> 
+                <input class="anchomaximo" type="color" value="#FFFFFF">
+            </div>
+        </div>   
+        <div class="text-transform">
+            <input type="checkbox" name="" id=""><label for="">Fondo transparente</label> 
+        </div> 
+
+        <!--CONTORNO-->
+        <div class="conten">
+            <label for="" class="bold">Contorno</label>
+            <div class="row contorno">
+                <button>Ninguno</button>
+                <button>Claro</button>
+                <button>Oscuro</button>
+            </div>
+        </div>
+
+        <!--ESPACIADO-->
+        <div class="conten">
+            <label for="" class="bold">espaciado</label>
+            <input type="number" placeholder="35" min="10" max="50">
+        </div>
+
+        <!--INTERLINEADO-->
+        <div class="conten">
+            <label for="" class="bold">interlineado</label>
+            <select name="select3">
+                <option value="punto8">0.8</option>
+                <option value="uno">1</option>
+                <option value="unopuntodos" selected>1.2</option>
+                <option value="unopuntocinco">1.5</option>
+                <option value="dos">2</option>
+                <option value="dospuntocinco">2.5</option>
+                
+            </select>
+        </div>
+                
+             
+            
+            
+        
+    </div>
+</body>
+</html>
