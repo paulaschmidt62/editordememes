@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-inputs.css">
-    <title>Document</title>
+    <title>Paneles input</title>
+    
 </head>
 
-
 <body>
+   
+    <!--COLUMNA IMAGEN-->
    <div class="contengral">
+    <span><i class="fas fa-times"></i></span>
         <h2>IMAGEN</h2>
 
         <!--URL-->
@@ -24,60 +27,64 @@
                 <label for="" class="bold">FONDO</label>
             <div class="row">
                 <input class="cincuenta" type="color" value="#FFFFFF">
-                <select class="cincuenta" name="select">
-                    <option value="Ninguno" selected>Ninguno</option>
-                    <option value="Aclarar">Aclarar</option>
-                    <option value="Oscurecer">Oscurecer</option>
-                    <option value="Diferencia">Diferencia</option>
-                    <option value="Luminosidad">Luminosidad</option>
-                    <option value="Multiplicar">Multiplicar</option>
+                <select class="cincuenta" name="">
+                    <option value="" selected>Ninguno</option>
+                    <option value="">Aclarar</option>
+                    <option value="">Oscurecer</option>
+                    <option value="">Diferencia</option>
+                    <option value="">Luminosidad</option>
+                    <option value="">Multiplicar</option>
                 </select>
             </div>
         </div>
         
         <!--FILTROS-->
-            <p class="bold">FILTROS</p>
-            <label for="">Brillo</label>
-            <input type="range" min="0" max="1">
+        <form action="">
+            <div class="conten">
+                <p class="bold">FILTROS</p>
+                <label for="">Brillo</label>
+                <input type="range" min="0" max="1" value="brightness" step="0.1" id="">
 
-            <label for="">Opacidad</label>
-            <input type="range" min="0" max="1">
+                <label for="">Opacidad</label>
+                <input type="range" min="0" max="1" value="opacity" step="0.1" id="">
 
-            <label for="">Contraste</label>
-            <input type="range" min="100%" max="1000%">
+                <label for="">Contraste</label>
+                <input type="range" min="100%" max="1000%" value="contrast" step="1%" id="">
 
-            <label for="">Desenfoque</label>
-            <input type="range" min="0" max="10">
+                <label for="">Desenfoque</label>
+                <input type="range" min="0px" max="10px" value="blur" step="0.1px" id="">
 
-            <label for="">Escala de grises</label>
-            <input type="range" min="0%" max="100%">
+                <label for="">Escala de grises</label>
+                <input type="range" min="0%" max="100%" value="grayscale" step="1%" id="">
 
-            <label for="">Sepia</label>
-            <input type="range" min="0%" max="100%">
+                <label for="">Sepia</label>
+                <input type="range" min="0%" max="100%" value="sepia" step="1%" id="">
 
-            <label for="">Hue</label>
-            <input type="range" min="0deg" max="359deg">
+                <label for="">Hue</label>
+                <input type="range" min="0deg" max="359deg" value="hue-rotation" step="1deg" id="">
 
-            <label for="">Saturación</label>
-            <input type="range" min="100%" max="1000%">
+                <label for="">Saturación</label>
+                <input type="range" min="100%" max="1000%" value="saturation" step="10%" id="">
 
-            <label for="">Negativo</label>
-            <input type="range" min="0" max="1">
-        
-        <!--RESTABLECER-->
-        <div class="conten">           
-            <button type="reset">Restablecer filtros</button>
-        </div>    
+                <label for="">Negativo</label>
+                <input type="range" min="0" max="1" value="invert" step="0.1" id="">
+            </div>
+            <!--REESTABLECER-->
+            <div class="conten">           
+                <button type="reset">Reestablecer filtros</button>
+            </div>    
+        </form>
     </div>
 
 <!--COLUMNA TEXTO-->    
     <div class="contengral">
+     <span><i class="fas fa-times"></i></span>  
         <h2>TEXTO</h2>
 
         <!--SUPERIOR-->
         <div class="conten">
             <label for="" class="bold">superior</label>
-            <textarea name="" id="" cols="5" rows="1" minlength="03" maxlength="30" placeholder="TOP TEXT"></textarea>
+            <textarea name="" id="" cols="5" rows="1" minlength="" maxlength="30" placeholder="TOP TEXT"></textarea>
         </div>    
         <div class="text-transform">
             <input type="checkbox" name="" id=""><label for="">Sin texto superior</label> 
@@ -86,7 +93,7 @@
         <!--INFERIOR-->
         <div class="conten">
             <label for="" class="bold">inferior</label>
-            <textarea name="" id="" cols="5" rows="1" minlength="03" maxlength="30" placeholder="BOTTOM TEXT"></textarea>
+            <textarea name="" id="" cols="5" rows="1" minlength="" maxlength="30" placeholder="BOTTOM TEXT"></textarea>
         </div>    
         <div class="text-transform">
             <input type="checkbox" name="" id=""><label for="">Sin texto inferior</label> 
@@ -95,22 +102,22 @@
         <!--FUENTE-->
         <div class="conten">
             <label for="" class="bold">fuente</label>
-            <select name="select2">
+            <select name="">
                 <option value="Impact" selected>Impact</option>
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
-                <option value="">American TypeWriter</option>
-                <option value="">Andale Mono</option>
-                <option value="">Comics Sans MS</option>
-                <option value="">Helvetica</option>
-                <option value="">Verdana</option>
-                <option value="">Times New Roman</option>
+                <option value="American TypeWriter">American TypeWriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comics Sans MS">Comics Sans MS</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
             </select>
             <div class="contencuartos">
                 <input type="number" placeholder="40" min="12" max="118">
-                <button>I</button>
-                <button>M</button>
-                <button>D</button>
+                <button><i class="fas fa-align-left"></i></button>
+                <button><i class="fas fa-align-center"></i></button>
+                <button><i class="fas fa-align-right"></i></button>
             </div>
         </div>
     
@@ -150,13 +157,13 @@
         <!--INTERLINEADO-->
         <div class="conten">
             <label for="" class="bold">interlineado</label>
-            <select name="select3">
-                <option value="punto8">0.8</option>
-                <option value="uno">1</option>
-                <option value="unopuntodos" selected>1.2</option>
-                <option value="unopuntocinco">1.5</option>
-                <option value="dos">2</option>
-                <option value="dospuntocinco">2.5</option>
+            <select name="">
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2" selected>1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
                 
             </select>
         </div>
@@ -166,5 +173,7 @@
             
         
     </div>
+
+    <script src="https://kit.fontawesome.com/bb8370d015.js" crossorigin="anonymous"></script>
 </body>
 </html>
