@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-inputs.css">
         <script src="https://kit.fontawesome.com/bb8370d015.js" crossorigin="anonymous"></script>
 
     </head>
@@ -20,8 +21,8 @@
                 <h1>Generador de memes</h1>
                 <nav>
                     <ul>
-                        <li><a href="#"><i class="far fa-file-image"></i>Imagen</a></li>
-                        <li><a href="#"><i class="fas fa-font"></i>Texto</a></li>
+                        <li id="botonImg"><a href="#"><i class="far fa-file-image"></i>Imagen</a></li>
+                        <li id="botonTexto"><a href="#"><i class="fas fa-font"></i>Texto</a></li>
                         <li><a href="#"><i class="far fa-lightbulb"></i>Modo Oscuro</a></li>
                     </ul>
                 </nav>
@@ -37,10 +38,145 @@
         </div>
 
         <div class="right-panel">
-            <h3>IMAGEN</h3>
-        </div>
-        <div>
-            <h1>tit</h1>
+            <!--COLUMNA IMAGEN-->
+             <div class="contengral" id="columnaImagen">
+                <span id="cerrar-p-img"><i class="fas fa-times"></i></span>
+
+                <h2>IMAGEN</h2>
+                <!--URL-->
+                <div class="conten">
+                    <label for="" class="bold">URL</label>
+                    <input type="url" name="url">
+                </div>
+
+                <!--FONDO-->
+                <div class="conten">
+                        <label for="" class="bold">FONDO</label>
+                    <div class="row">
+                        <input class="cincuenta" type="color" value="#FFFFFF">
+                        <select class="cincuenta" name="">
+                            <option value="" selected>Ninguno</option>
+                            <option value="">Aclarar</option>
+                            <option value="">Oscurecer</option>
+                            <option value="">Diferencia</option>
+                            <option value="">Luminosidad</option>
+                            <option value="">Multiplicar</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!--FILTROS-->
+                <form action="">
+                    <div class="conten">
+                        <p class="bold">FILTROS</p>
+                        <label for="">Brillo</label>
+                        <input type="range" min="0" max="1" value="brightness" step="0.1" id="">
+
+                        <label for="">Opacidad</label>
+                        <input type="range" min="0" max="1" value="opacity" step="0.1" id="">
+
+                        <label for="">Contraste</label>
+                        <input type="range" min="100%" max="1000%" value="contrast" step="1%" id="">
+
+                        <label for="">Desenfoque</label>
+                        <input type="range" min="0px" max="10px" value="blur" step="0.1px" id="">
+
+                        <label for="">Escala de grises</label>
+                        <input type="range" min="0%" max="100%" value="grayscale" step="1%" id="">
+
+                        <label for="">Sepia</label>
+                        <input type="range" min="0%" max="100%" value="sepia" step="1%" id="">
+
+                        <label for="">Hue</label>
+                        <input type="range" min="0deg" max="359deg" value="hue-rotation" step="1deg" id="">
+
+                        <label for="">Saturación</label>
+                        <input type="range" min="100%" max="1000%" value="saturation" step="10%" id="">
+
+                        <label for="">Negativo</label>
+                        <input type="range" min="0" max="1" value="invert" step="0.1" id="">
+                    </div>
+                    <!--REESTABLECER-->
+                    <div class="conten">           
+                        <button type="reset">Reestablecer filtros</button>
+                    </div>    
+                </form>
+            </div>
+
+            <!--COLUMNA TEXTO-->    
+            <div class="contengral ocultar" id="columnaTexto">
+                <span id="cerrar-p-tex"><i class="fas fa-times"></i></span>  
+
+                <h2>TEXTO</h2>
+                <!--TEXTO SUPERIOR-->
+                <div class="conten">
+                    <label for="" class="bold">superior</label>
+                    <textarea name="" id="" cols="5" rows="1" minlength="" maxlength="30" placeholder="TOP TEXT"></textarea>
+                </div>    
+                <div class="text-transform">
+                    <input type="checkbox" name="" id=""><label for="">Sin texto superior</label> 
+                </div>
+        
+                <!--TEXTO INFERIOR-->
+                <div class="conten">
+                    <label for="" class="bold">inferior</label>
+                    <textarea name="" id="" cols="5" rows="1" minlength="" maxlength="30" placeholder="BOTTOM TEXT"></textarea>
+                </div>    
+                <div class="text-transform">
+                    <input type="checkbox" name="" id=""><label for="">Sin texto inferior</label> 
+                </div>
+                
+                <!--FUENTE-->
+                <div class="conten">
+                    <label for="" class="bold">fuente</label>
+                    <select name="">
+                        <option value="Impact" selected>Impact</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American TypeWriter">American TypeWriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comics Sans MS">Comics Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <div class="contencuartos">
+                        <input type="number" placeholder="40" min="12" max="118">
+                        <button><i class="fas fa-align-left"></i></button>
+                        <button><i class="fas fa-align-center"></i></button>
+                        <button><i class="fas fa-align-right"></i></button>
+                    </div>
+                </div>
+            
+        
+                <!--COLOR-->
+                <div class="row">
+                    <div class="conten">
+                        <label for="" class="bold">color</label>
+                        <input class="anchomaximo" type="color" value="#000000">
+                    </div>
+                <!--FONDO-->        
+                    <div class="conten">
+                        <label for="" class="bold">fondo</label> 
+                        <input class="anchomaximo" type="color" value="#FFFFFF">
+                    </div>
+                </div>   
+                <div class="text-transform">
+                    <input type="checkbox" name="" id=""><label for="">Fondo transparente</label> 
+                </div> 
+        
+                <!--CONTORNO-->
+                <div class="conten">
+                    <label for="" class="bold">Contorno</label>
+                    <div class="row contorno">
+                        <button>Ninguno</button>
+                        <button>Claro</button>
+                        <button>Oscuro</button>
+                    </div>
+                </div>
+                        
+            </div>
+
         </div>
 
 
@@ -50,5 +186,6 @@
         <![endif]-->
         
         <script src="" async defer></script>
+        <script src="archivo.js"></script>
     </body>
 </html>
