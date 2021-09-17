@@ -1,21 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+body{
+    
     font-size: .9rem;
 }
 
 .contengral {
     display: flex;
     flex-direction: column;
-    width: 18%;
-    border: 1px solid rgb(37, 37, 37);
+    /*width: 18%;*/
+    /*border: 1px solid rgb(37, 37, 37);*/
     padding: 10px;
     text-transform: uppercase;
     font-size: .9em;
     background-color: rgb(41, 41, 41);/*#252935*/
     color: white;
-    float: right;
+    
 }
 
 span{
@@ -30,6 +29,7 @@ span{
 .contengral h2{
     text-align: center;
     margin-top: 15px;
+    font-size: .9rem;
 }
 
 .bold {
@@ -70,7 +70,7 @@ textarea::placeholder{
 }
 
 input[type=range]{
-    padding: 12px 0;
+    padding: 8px 0;
     background-color:transparent;
 }
 
@@ -175,7 +175,7 @@ textarea {
       width: 80%;
   }
 
-  @media (max-width:1300px){
+  @media (max-width:1000px){
     span{
         display: block;
     }
@@ -183,4 +183,10 @@ textarea {
     .contengral h2{
         margin-top: 0;
     }
+  }
+
+  /***********ESTILOS PARA JS***********************/
+
+  .ocultar{
+      display: none;
   }
