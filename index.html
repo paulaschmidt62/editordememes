@@ -14,16 +14,16 @@
         <script src="https://kit.fontawesome.com/bb8370d015.js" crossorigin="anonymous"></script>
 
     </head>
-    <body>
+    <body id="lightMode" class="colorMode">
         <div class="container">
             <header>
                 <h1>Generador de memes</h1>
                 <nav>
                     <ul>
                         <li><a href="#"><i class="far fa-file-image"></i>Imagen</a></li>
-                        <li><a href="#"><i class="fas fa-font"></i>Texto</a></li>
-                        <li><a href="#"><i class="far fa-lightbulb"></i>Modo Oscuro</a></li>
+                        <li><a href="#"><i class="fas fa-font"></i>Texto</a></li>    
                     </ul>
+                    <button id="btnLight" onclick="cambiarColor()"><i class="far fa-lightbulb"></i>Modo oscuro</button>
                 </nav>
             </header>
             <main>
