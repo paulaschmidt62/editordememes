@@ -7,13 +7,18 @@ body{
 .contengral {
     display: flex;
     flex-direction: column;
-    /*width: 18%;*/
-    /*border: 1px solid rgb(37, 37, 37);*/
+    width: 245px;
+    height: 100%;
     padding: 10px;
     text-transform: uppercase;
     font-size: .9em;
     background-color: rgb(41, 41, 41);/*#252935*/
     color: white;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
     
 }
 
@@ -169,13 +174,14 @@ textarea {
 
   .contorno button{
       width: 31%;
+      font-size: inherit;
   }
 
   .anchomaximo {
       width: 80%;
   }
 
-  @media (max-width:1000px){
+  @media (max-width:800px){
     span{
         display: block;
     }

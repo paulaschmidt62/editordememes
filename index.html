@@ -13,7 +13,10 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style-inputs.css">
         <script src="https://kit.fontawesome.com/bb8370d015.js" crossorigin="anonymous"></script>
-
+        <!--LIBRERIA DE DESCARGA-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.2.0/dom-to-image.min.js" integrity="sha512-0IolcghONRd8gUdpmhs7/hXQ4Pn35ZHL4N/oRiTGUCi699FsWFn7Zs3JrBRErkLgoGz7g6gIQ6StQP2rdbxjHg==" crossorigin="anonymous"></script>
+    
     </head>
     <body>
         <div class="container">
@@ -23,44 +26,44 @@
                     <ul>
                         <li id="botonImg"><a href="#"><i class="far fa-file-image"></i>Imagen</a></li>
                         <li id="botonTexto"><a href="#"><i class="fas fa-font"></i>Texto</a></li>
-                        <li><a href="#"><i class="far fa-lightbulb"></i>Modo Oscuro</a></li>
+                        <li><button class="btn-color-mode"><i class="far fa-lightbulb"></i>Modo Oscuro</button></li>
                     </ul>
                 </nav>
             </header>
             <main>
-                <div class="container_meme">
+                <div id="container_meme" class="container_meme">
                     <div class="top" id="text-sup-meme">TOP TEXT</div>
-                    <div class="ingresa_img"></div>
+                    <div id="ingresa_img" class="ingresa_img"></div>
                     <div class="top" id="text-inf-meme">BOTTOM TEXT</div>
                 </div>
-                <input type="submit" value="Descargar meme"class="downloadbutton">
+                <button id="boton_descarga_img_cargada" class="downloadbutton">Descargar imagen</button>
             </main>
         </div>
 
-        <div class="right-panel">
+        <div id="right-panel" class="right-panel">
             <!--COLUMNA IMAGEN-->
              <div class="contengral" id="columnaImagen">
                 <span id="cerrar-p-img"><i class="fas fa-times"></i></span>
 
                 <h2>IMAGEN</h2>
-                <!--URL-->
-                <div class="conten">
-                    <label for="" class="bold">URL</label>
-                    <input type="url" name="url">
-                </div>
+                    <!--URL-->
+                    <div class="conten">
+                        <label for="" class="bold">URL</label>
+                        <input type="url" id="url-imagen">
+                    </div>
 
                 <!--FONDO-->
                 <div class="conten">
                         <label for="" class="bold">FONDO</label>
                     <div class="row">
-                        <input class="cincuenta" type="color" value="#FFFFFF">
-                        <select class="cincuenta" name="">
-                            <option value="" selected>Ninguno</option>
-                            <option value="">Aclarar</option>
-                            <option value="">Oscurecer</option>
-                            <option value="">Diferencia</option>
-                            <option value="">Luminosidad</option>
-                            <option value="">Multiplicar</option>
+                        <input id="colorFondo" class="cincuenta" type="color" value="#FFFFFF">
+                        <select id="select-fondo" class="cincuenta" name="">
+                            <option value="unset" selected>Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
                         </select>
                     </div>
                 </div>
@@ -114,7 +117,7 @@
                     <textarea name="" id="text-sup-input" cols="5" rows="1" minlength="" maxlength="30" placeholder="TOP TEXT"></textarea>
                 </div>    
                 <div class="text-transform">
-                    <input type="checkbox" name="" id=""><label for="">Sin texto superior</label> 
+                    <input type="checkbox" name="" id="close-text-sup" onclick='ocultarTextoSupMeme()'><label for="" >Sin texto superior</label> 
                 </div>
         
                 <!--TEXTO INFERIOR-->
@@ -123,13 +126,13 @@
                     <textarea name="" id="text-inf-input" cols="5" rows="1" minlength="" maxlength="30" placeholder="BOTTOM TEXT"></textarea>
                 </div>    
                 <div class="text-transform">
-                    <input type="checkbox" name="" id=""><label for="">Sin texto inferior</label> 
+                    <input type="checkbox" name="" id="close-text-inf" onclick='ocultarTextoInfMeme()'><label for="">Sin texto inferior</label> 
                 </div>
                 
                 <!--FUENTE-->
                 <div class="conten">
                     <label for="" class="bold">fuente</label>
-                    <select name="">
+                    <select name="fuentes" id="seleccionarFuentes">
                         <option value="Impact" selected>Impact</option>
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
@@ -142,9 +145,9 @@
                     </select>
                     <div class="contencuartos">
                         <input type="number" placeholder="40" min="12" max="118">
-                        <button><i class="fas fa-align-left"></i></button>
-                        <button><i class="fas fa-align-center"></i></button>
-                        <button><i class="fas fa-align-right"></i></button>
+                        <button id="botonTderecho"><i class="fas fa-align-left"></i></button>
+                        <button id="botonTcentro"><i class="fas fa-align-center"></i></button>
+                        <button id="botonTizquierdo"><i class="fas fa-align-right"></i></button>
                     </div>
                 </div>
             
@@ -153,25 +156,25 @@
                 <div class="row">
                     <div class="conten">
                         <label for="" class="bold">color</label>
-                        <input class="anchomaximo" type="color" value="#000000">
+                        <input id="colorTexto" class="anchomaximo" type="color" value="#000000">
                     </div>
                 <!--FONDO-->        
                     <div class="conten">
                         <label for="" class="bold">fondo</label> 
-                        <input class="anchomaximo" type="color" value="#FFFFFF">
+                        <input id="colorFondoTexto" class="anchomaximo" type="color" value="#FFFFFF">
                     </div>
                 </div>   
                 <div class="text-transform">
-                    <input type="checkbox" name="" id=""><label for="">Fondo transparente</label> 
+                    <input type="checkbox" name="" id="input-transparente" onclick='FondoImgDiv()'><label for="">Fondo transparente</label> 
                 </div> 
         
                 <!--CONTORNO-->
                 <div class="conten">
                     <label for="" class="bold">Contorno</label>
                     <div class="row contorno">
-                        <button>Ninguno</button>
-                        <button>Claro</button>
-                        <button>Oscuro</button>
+                        <button id="niguno">Ninguno</button>
+                        <button id="ContornoClaro">Claro</button>
+                        <button id="ContornoOscuro">Oscuro</button>
                     </div>
                 </div>
                         
