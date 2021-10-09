@@ -32,9 +32,9 @@
             </header>
             <main>
                 <div id="container_meme" class="container_meme">
-                    <div class="top" id="text-sup-meme">TOP TEXT</div>
+                    <div class="top" id="text-sup-meme"><p class="top" id="text-sup-meme">TOP TEXT</p></div>
                     <div id="ingresa_img" class="ingresa_img"></div>
-                    <div class="top" id="text-inf-meme">BOTTOM TEXT</div>
+                    <div class="top" id="text-inf-meme"> <p class="top" id="text-inf-meme">BOTTOM TEXT</p></div>
                 </div>
                 <button id="boton_descarga_img_cargada" class="downloadbutton">Descargar imagen</button>
             </main>
@@ -45,7 +45,7 @@
              <div class="contengral" id="columnaImagen">
                 <span id="cerrar-p-img"><i class="fas fa-times"></i></span>
 
-                <h2>IMAGEN</h2>
+                <h3>IMAGEN</h3>
                     <!--URL-->
                     <div class="conten">
                         <label for="" class="bold">URL</label>
@@ -73,44 +73,44 @@
                     <div class="conten">
                         <p class="bold">FILTROS</p>
                         <label for="">Brillo</label>
-                        <input type="range" min="0" max="1" value="brightness" step="0.1" id="">
+                        <input type="range" min="0" max="1" value="1" step="0.1" id="brightness">
 
                         <label for="">Opacidad</label>
-                        <input type="range" min="0" max="1" value="opacity" step="0.1" id="">
+                        <input type="range" min="0" max="1" value="1" step="0.1" id="opacity">
 
                         <label for="">Contraste</label>
-                        <input type="range" min="100%" max="1000%" value="contrast" step="1%" id="">
+                        <input type="range" min="100" max="1000" value="100"  id="contrast">
 
                         <label for="">Desenfoque</label>
-                        <input type="range" min="0px" max="10px" value="blur" step="0.1px" id="">
+                        <input type="range" min="0" max="10" value="0"  id="blur">
 
                         <label for="">Escala de grises</label>
-                        <input type="range" min="0%" max="100%" value="grayscale" step="1%" id="">
+                        <input type="range" min="0" max="100" value="0"  id="grayscale">
 
                         <label for="">Sepia</label>
-                        <input type="range" min="0%" max="100%" value="sepia" step="1%" id="">
+                        <input type="range" min="0" max="100" value="0"  id="sepia">
 
                         <label for="">Hue</label>
-                        <input type="range" min="0deg" max="359deg" value="hue-rotation" step="1deg" id="">
+                        <input type="range" min="0" max="359" value="0"  id="hue">
 
                         <label for="">Saturación</label>
-                        <input type="range" min="100%" max="1000%" value="saturation" step="10%" id="">
+                        <input type="range" min="100" max="1000" value="100" step="10" id="saturate">
 
                         <label for="">Negativo</label>
-                        <input type="range" min="0" max="1" value="invert" step="0.1" id="">
+                        <input type="range" min="0" max="1" value="0" step="0.1" id="invert">
                     </div>
                     <!--REESTABLECER-->
                     <div class="conten">           
-                        <button type="reset">Reestablecer filtros</button>
+                        <button id="reset" type="reset">Reestablecer filtros</button>
                     </div>    
                 </form>
             </div>
 
             <!--COLUMNA TEXTO-->    
-            <div class="contengral ocultar" id="columnaTexto">
+            <div class="contengral ocultar" class="contengral" id="columnaTexto">
                 <span id="cerrar-p-tex"><i class="fas fa-times"></i></span>  
 
-                <h2>TEXTO</h2>
+                <h3>TEXTO</h3>
                 <!--TEXTO SUPERIOR-->
                 <div class="conten">
                     <label for="" class="bold">superior</label>
@@ -138,13 +138,13 @@
                         <option value="Arial Black">Arial Black</option>
                         <option value="American TypeWriter">American TypeWriter</option>
                         <option value="Andale Mono">Andale Mono</option>
-                        <option value="Comics Sans MS">Comics Sans MS</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
                         <option value="Helvetica">Helvetica</option>
                         <option value="Verdana">Verdana</option>
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
                     <div class="contencuartos">
-                        <input type="number" placeholder="40" min="12" max="118">
+                        <input  id='tamnoFuentes' type="number" placeholder="40" min="12" max="118">
                         <button id="botonTderecho"><i class="fas fa-align-left"></i></button>
                         <button id="botonTcentro"><i class="fas fa-align-center"></i></button>
                         <button id="botonTizquierdo"><i class="fas fa-align-right"></i></button>
@@ -165,16 +165,16 @@
                     </div>
                 </div>   
                 <div class="text-transform">
-                    <input type="checkbox" name="" id="input-transparente" onclick='FondoImgDiv()'><label for="">Fondo transparente</label> 
+                    <input type="checkbox" name="" id="input-transparente" onclick='ocultarTodo()'><label for="">Fondo transparente</label> 
                 </div> 
         
                 <!--CONTORNO-->
                 <div class="conten">
                     <label for="" class="bold">Contorno</label>
                     <div class="row contorno">
-                        <button id="niguno">Ninguno</button>
-                        <button id="ContornoClaro">Claro</button>
-                        <button id="ContornoOscuro">Oscuro</button>
+                        <button id="ninguno">Ninguno</button>
+                        <button id="contornoClaro">Claro</button>
+                        <button id="contornoOscuro">Oscuro</button>
                     </div>
                 </div>
                         
@@ -190,5 +190,7 @@
         
         <script src="" async defer></script>
         <script src="archivo.js"></script>
+        <script src="filtros.js"></script>
+        <script src="texto.js"></script>
     </body>
 </html>
